@@ -1,6 +1,8 @@
 import { Router } from "express";
 import { wrapHandler } from "@medusajs/medusa";
 import onboardingRoutes from "./onboarding";
+import orderreportRoutes from "./orderreport";
+import abandoncartRoutes from "./abandoncart";
 import customRouteHandler from "./custom-route-handler";
 
 // Initialize a custom router
@@ -15,4 +17,8 @@ export function attachAdminRoutes(adminRouter: Router) {
 
   // Attach routes for onboarding experience, defined separately
   onboardingRoutes(adminRouter);
+
+  // Attach routes for onboarding experience, defined separately
+  orderreportRoutes(adminRouter);
+  abandoncartRoutes(adminRouter);
 }
