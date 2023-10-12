@@ -52,6 +52,25 @@ const plugins = [
       },
     },
   },
+  {
+    resolve: `medusa-payment-stripe-description`,
+    options: {
+      api_key: process.env.STRIPE_API_KEY,
+      webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
+      payment_description: process.env.SITE_NAME
+    },
+  },
+  {
+    resolve: `medusa-plugin-sendgrid`,
+    options: {
+      api_key: process.env.SENDGRID_API_KEY,
+      from: process.env.SENDGRID_FROM,
+      order_placed_template: process.env.SENDGRID_ORDER_PLACED_ID,
+      order_shipped_template: process.env.SENDGRID_ORDER_SHIPPED,
+      user_password_reset_template: "d-ebfe3ef37fdb4fd2b788c92fddab81e6",
+      customer_password_reset_template: process.env.SENDGRID_CUSTOMER_FORGOT_PASSWORD,
+    },
+  },
 ];
 
 const modules = {
