@@ -1,6 +1,8 @@
+import { wrapHandler } from "@medusajs/utils";
 import {Router} from "express";
 import {Request, Response} from "express";
 import { PrismaClient } from '@prisma/client'
+import getAbandonCarts from "./getAbandonCarts";
 const prisma = new PrismaClient()
 
 const router = Router();
@@ -16,13 +18,7 @@ export default (adminRouter: Router) => {
         res.json({cart: data, lineItems})
     });
 
-    router.get("/",async (req, res) => {
-
-        let data = await getAllAbandonCart();
-        console.log(data);
-        res.json(data)
-    })
-
+    router.get("/",wrapHandler(getAbandonCarts));
 };
 
 const getAllAbandonCart = async () => {
