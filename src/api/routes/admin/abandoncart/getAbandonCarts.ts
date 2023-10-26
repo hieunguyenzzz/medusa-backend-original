@@ -9,9 +9,14 @@ export default async function getAbandonCarts(req: Request, res: Response) {
 
 const getAllAbandonCart = async () => {
     let orders = await prisma.order.findMany();
-    let notAbandoncart =  [];
-    for(const order of orders) {
+    let notAbandoncart = [];
+    for (const order of orders) {
         notAbandoncart.push(order.cart_id || "");
     }
-    return await prisma.cart.findMany({where: {id: {notIn: notAbandoncart}}});
+    let allCarts = await prisma.cart.findMany();
+    return allCarts.filter(cart => !notAbandoncart.includes(cart.id)).sort((a,b) => {
+        // @ts-ignore
+        return new Date(a.created_at) - new Date(b.created_at)
+    }).slice(-100);
+
 }
