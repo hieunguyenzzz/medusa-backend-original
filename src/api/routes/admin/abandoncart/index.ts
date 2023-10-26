@@ -21,12 +21,3 @@ export default (adminRouter: Router) => {
     router.get("/",wrapHandler(getAbandonCarts));
 };
 
-const getAllAbandonCart = async () => {
-    let orders = await prisma.order.findMany();
-    let notAbandoncart =  [];
-    for(const order of orders) {
-        notAbandoncart.push(order.cart_id || "");
-    }
-    return await prisma.cart.findMany({where: {id: {notIn: notAbandoncart}}});
-}
-
