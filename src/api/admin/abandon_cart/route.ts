@@ -16,7 +16,7 @@ const getAllAbandonCart = async () => {
     for (const order of orders) {
         notAbandoncart.push(order.cart_id || "");
     }
-    let allCarts = await prisma.cart.findMany();
+    let allCarts = await prisma.cart.findMany({where: {email: {not: null}}});
     return allCarts.filter(cart => !notAbandoncart.includes(cart.id)).sort((a,b) => {
         // @ts-ignore
         return new Date(a.created_at) - new Date(b.created_at)
