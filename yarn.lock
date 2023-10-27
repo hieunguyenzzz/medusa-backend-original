@@ -9575,10 +9575,10 @@ medusa-payment-manual@^1.0.24:
   resolved "https://registry.yarnpkg.com/medusa-payment-manual/-/medusa-payment-manual-1.0.24.tgz#4836998d51e4b2be4d0ba7acf3016b35c0f85437"
   integrity sha512-VcQJuuE86J+ePPmZPVp0961Gkjfvu9v/xII9jM5uOH2CsuMsLI3G8QOjDBxn+kiy+hiQFXD1ZoWDDuuFY/Wt8A==
 
-medusa-payment-stripe-description@^6:
-  version "6.0.13"
-  resolved "https://registry.yarnpkg.com/medusa-payment-stripe-description/-/medusa-payment-stripe-description-6.0.13.tgz#6c48d39b85bf74d2a92eee16764f80acdb376334"
-  integrity sha512-dylX0GmTHmEWi9jdVCgss8a6vz6DomKpdHpi2Atw8+UgGD/SEoFTMIxaX8GDdWjCCoocc5sffltBs2p1OL9UXA==
+medusa-payment-stripe-description@6.0.14:
+  version "6.0.14"
+  resolved "https://registry.yarnpkg.com/medusa-payment-stripe-description/-/medusa-payment-stripe-description-6.0.14.tgz#85647a7deed8a793420efe5864cd95e2d0e13cc8"
+  integrity sha512-EjYbfVy4gmlgtg+SdiUFkHcoVt8sXCePZgre+cqz5CDAjw9X3kOO1vLL3RdjBuHmYWIwyy5Bmd3ICyRh/+psfA==
   dependencies:
     body-parser "^1.19.0"
     express "^4.17.1"
