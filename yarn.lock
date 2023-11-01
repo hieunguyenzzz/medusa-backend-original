@@ -2341,11 +2341,11 @@
     "@medusajs/modules-sdk" "^1.8.8"
 
 "@medusajs/cache-redis@^1.8.8":
-  version "1.8.8"
-  resolved "https://registry.yarnpkg.com/@medusajs/cache-redis/-/cache-redis-1.8.8.tgz#2535828a5b3cfbe65d319265d0f084d4f935cb2a"
-  integrity sha512-KjcAYYkjDLM82fAxtdckWBtlS4XGcqNiWhYH2OIQLZyqQp66K5DxsvtfzntO8W3ttBnGCvad1ydSwyAXxMfQRw==
+  version "1.8.9"
+  resolved "https://registry.yarnpkg.com/@medusajs/cache-redis/-/cache-redis-1.8.9.tgz#6f9fbab868328645982c3533d79c13a83901c88a"
+  integrity sha512-Xv4X5ZuGm6TIYs6UEnNafkJ8FshqQr6rouQiA5UG/trZXGeqPylvL4s1JBaNe6fsRjjHap61T7nFDRFqtMDQJg==
   dependencies:
-    "@medusajs/modules-sdk" "^1.8.8"
+    "@medusajs/modules-sdk" "^1.12.2"
     awilix "^8.0.0"
     ioredis "^5.3.1"
 
@@ -2493,43 +2493,20 @@
     uuid "^9.0.0"
     winston "^3.8.2"
 
-"@medusajs/modules-sdk@^1.12.1":
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/@medusajs/modules-sdk/-/modules-sdk-1.12.1.tgz#63d2708af61a7c2ad456e49af5ba7ab25d60890d"
-  integrity sha512-SqxlbMdiFV5KgKAVob4XXzMlqNKBfwX9GEOJhboIq5bAy3BQeT7Z5lCnWtO68ClkH36tkczAuPFerBV6+OMRfQ==
+"@medusajs/modules-sdk@^1.12.1", "@medusajs/modules-sdk@^1.12.2", "@medusajs/modules-sdk@^1.8.8":
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@medusajs/modules-sdk/-/modules-sdk-1.12.2.tgz#4774968071e7db3230e49784954cb024e64fad0b"
+  integrity sha512-3Ozek5Fku86WqCS0jTR5xNkzNlAnkm8QQyoiVxgNvAKjVzhY0qpsHHRh2/9BpRGwkkEAmgZFnygycoQgm6iZrQ==
   dependencies:
     "@graphql-tools/merge" "^9.0.0"
     "@graphql-tools/schema" "^10.0.0"
-    "@medusajs/orchestration" "^0.4.2"
-    "@medusajs/types" "^1.11.4"
+    "@medusajs/orchestration" "^0.4.3"
+    "@medusajs/types" "^1.11.5"
     "@medusajs/utils" "^1.10.4"
     awilix "^8.0.0"
     knex "2.4.2"
     pg "^8.11.2"
     resolve-cwd "^3.0.0"
-
-"@medusajs/modules-sdk@^1.8.8":
-  version "1.11.3"
-  resolved "https://registry.yarnpkg.com/@medusajs/modules-sdk/-/modules-sdk-1.11.3.tgz#741e422fecb4916fc7dfed4ec3110834476c2246"
-  integrity sha512-Kkh68uBMdFAAnuesojchGvyLesFj4juhsTazkewWdOHH5X3HUKFQ0tbdhTBZeM6lr+inmKo83YmIgheTLogHmA==
-  dependencies:
-    "@medusajs/orchestration" "^0.4.1"
-    "@medusajs/types" "^1.11.2"
-    "@medusajs/utils" "^1.10.2"
-    awilix "^8.0.0"
-    knex "2.4.2"
-    pg "^8.11.2"
-    resolve-cwd "^3.0.0"
-
-"@medusajs/orchestration@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@medusajs/orchestration/-/orchestration-0.4.1.tgz#01dfb24859709670338e03e08256b2cf44bba9a8"
-  integrity sha512-rtg4eNlxcwVQXkNMji12TR6EP4aMSxUlxZvpfZcji7hx6T5cW0lrqlWbdjX9dQAeP0UsF2sGLnODmWEL9hGdbA==
-  dependencies:
-    "@medusajs/types" "^1.11.2"
-    "@medusajs/utils" "^1.10.2"
-    awilix "^8.0.0"
-    graphql "^16.6.0"
 
 "@medusajs/orchestration@^0.4.2":
   version "0.4.2"
@@ -2537,6 +2514,16 @@
   integrity sha512-R3RA/37hm2Yy6R55m++andFF7PQy7DZQvaGh3SRm5h8AO2ZPGYqq3zvrRjXLiakNYMzH967RmpJZ6HAFFtxElg==
   dependencies:
     "@medusajs/types" "^1.11.4"
+    "@medusajs/utils" "^1.10.4"
+    awilix "^8.0.0"
+    graphql "^16.6.0"
+
+"@medusajs/orchestration@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@medusajs/orchestration/-/orchestration-0.4.3.tgz#b9369808bb1f7fb95a8115c390ead104fb314668"
+  integrity sha512-H5jW/WpDmk9Rsv/4tSEyl6+8Cwz0ipCOiSGTpTGMNbfpWxP7MjP07em5JU+atrfKL5tHpb6XxAb3d8f3iR76Ng==
+  dependencies:
+    "@medusajs/types" "^1.11.5"
     "@medusajs/utils" "^1.10.4"
     awilix "^8.0.0"
     graphql "^16.6.0"
@@ -2550,6 +2537,11 @@
   version "1.11.4"
   resolved "https://registry.yarnpkg.com/@medusajs/types/-/types-1.11.4.tgz#5ddd1eec4f55a958457d4bcadd935ad8b38b6b4c"
   integrity sha512-UPHTtHagzjQPN25casoxByBo9kI5IrD1gkwdzAUs6SqN0dVitTfHJQbHt3sYu2u0qGaUih2/zv5hS9YtGfaNog==
+
+"@medusajs/types@^1.11.5":
+  version "1.11.5"
+  resolved "https://registry.yarnpkg.com/@medusajs/types/-/types-1.11.5.tgz#83a697a8ced531ec2aecdd5d90b556fcb5833aa4"
+  integrity sha512-hoZ7FEFZqMiUItmMT2FmvG2tp1iygMqriepyIGMjoAWKJsNl3pfJDYgi4vvaVJjLuY5GCsiuXrvfAA/ngnw+dQ==
 
 "@medusajs/ui-preset@1.0.2":
   version "1.0.2"
@@ -2593,7 +2585,7 @@
     react-day-picker "^8.8.0"
     tailwind-merge "^1.13.2"
 
-"@medusajs/utils@^1.10.0", "@medusajs/utils@^1.10.2":
+"@medusajs/utils@^1.10.0":
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/@medusajs/utils/-/utils-1.10.3.tgz#ccbb2bc6fdc4b3e2757e0d1522fd90c97295b939"
   integrity sha512-x8AJ8wp1osnixsTBwI2ydogKa1pXzjuYnpYwRa2shQ4gWSNzA6jQGHnVZA0IFDhSBjcI/ewsfZXQkkLm1AiGbg==
