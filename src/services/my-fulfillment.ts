@@ -50,16 +50,19 @@ class MyFulfillmentService extends FulfillmentService {
       }
 
     calculatePrice(optionData, data, cart: Cart) {
-      console.log('calculatePrice');
-      console.log(data);
-      console.log(cart.region);
+        console.log('calculatePrice');
+        console.log(data);
+        console.log(cart.region);
 
 
-      let totals = cart.items.reduce((total, item) => total += item.total, 0);
-      let correctTotal = totals / 100;
+        let totals = cart.items.reduce((total, item) => total += item.total, 0);
+        let qty = cart.items.reduce((total, item) => total += item.quantity, 0);
+        let correctTotal = totals / 100;
         if (cart.region.currency_code == 'gbp') {
-            if (correctTotal < 1000) {
-                return Math.round(totals / 10);
+            if (qty <= 2 && correctTotal < 1000) {
+                return Math.round(totals / 5);
+            } else if (correctTotal < 1000) {
+                return Math.round(totals * 0.12);
             } else if (correctTotal < 1499) {
                 return Math.round(totals * 0.07);
             } else if (correctTotal < 2000) {
@@ -72,8 +75,10 @@ class MyFulfillmentService extends FulfillmentService {
         }
 
         if (cart.region.currency_code == 'eur') {
-            if (correctTotal < 1150) {
-                return Math.round(totals / 10);
+            if (qty <= 2 && correctTotal < 1150) {
+                return Math.round(totals / 5);
+            } else if (correctTotal < 1150) {
+                return Math.round(totals * 0.12);
             } else if (correctTotal < 1723) {
                 return Math.round(totals * 0.07);
             } else if (correctTotal < 2300) {
@@ -86,8 +91,10 @@ class MyFulfillmentService extends FulfillmentService {
         }
 
         if (cart.region.currency_code == 'nok' || cart.region.currency_code == 'sek') {
-            if (correctTotal < 13000) {
-                return Math.round(totals / 10);
+            if (qty <= 2 && correctTotal < 13000) {
+                return Math.round(totals / 5);
+            } else if (correctTotal < 13000) {
+                return Math.round(totals * 0.12);
             } else if (correctTotal < 20000) {
                 return Math.round(totals * 0.07);
             } else if (correctTotal < 26000) {
